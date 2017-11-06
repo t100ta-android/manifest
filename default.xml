@@ -542,6 +542,6 @@
   <remove-project name="kernel/common" />
 
   <project path="device/generic/common" name="device-generic-common" remote="t100" revision="marshmallow-x86" />
-  <project path="kernel" name="kernel/common" remote="t100" revision="kernel-4.4" />
+  <project path="kernel" name="kernel" remote="t100" revision="kernel-4.4" />
 
 </manifest>
