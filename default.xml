@@ -539,7 +539,9 @@
   <remote name="t100" fetch="https://gogs.thedrhax.pw/t100ta-android"  />
 
   <remove-project name="device/generic/common" />
+  <remove-project name="kernel" />
 
   <project path="device/generic/common" name="device-generic-common" remote="t100" revision="marshmallow-x86" />
+  <project path="kernel" name="kernel/common" remote="t100" revision="kernel-4.4" />
 
 </manifest>
