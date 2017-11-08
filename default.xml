@@ -5,20 +5,37 @@
            fetch="https://android.googlesource.com/" />
   <remote  name="x86"
            fetch="git://git.osdn.net/gitroot/android-x86" />
+  <remote  name="t100"
+           fetch="https://gogs.thedrhax.pw/t100ta-android" />
+  <remote  name="opengapps"
+           fetch="https://github.com/opengapps/"  />
   <default revision="refs/tags/android-6.0.1_r79"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
+  <!-- override projects for T100TAM -->
+  <project path="device/generic/common" name="device-generic-common" remote="t100" revision="marshmallow-x86" />
+  <project path="kernel" name="kernel" remote="t100" revision="kernel-4.7" />
+  <project path="bootable/newinstaller" name="platform-bootable-newinstaller" remote="t100" revision="marshmallow-x86" />
+
+  <!-- opengapps -->
+  <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
+
   <!-- from x86 port repositories -->
   <project path="build" name="platform/build" groups="pdk" remote="x86" revision="marshmallow-x86" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.4" />
+  <!-- <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.4" /> -->
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="marshmallow-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="marshmallow-x86" />
-  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="marshmallow-x86" />
-  <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="marshmallow-x86" />
+  <!-- <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="marshmallow-x86" /> -->
+  <!-- <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="marshmallow-x86" /> -->
   <project path="device/generic/firmware" name="device/generic/firmware" remote="x86" revision="marshmallow-x86" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="marshmallow-x86" />
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="marshmallow-x86" />
@@ -521,29 +538,5 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
-
-  <!-- opengapps -->
-  <remote name="opengapps" fetch="https://github.com/opengapps/"  />
-
-  <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
-  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps" />
-
-  <!-- arm64 depends on arm -->
-  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
-  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
-
-  <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
-  <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
-
-  <!-- override projects for T100TAM -->
-  <remote name="t100" fetch="https://gogs.thedrhax.pw/t100ta-android"  />
-
-  <remove-project name="device/generic/common" />
-  <remove-project name="kernel/common" />
-  <remove-project name="platform/bootable/newinstaller" />
-
-  <project path="device/generic/common" name="device-generic-common" remote="t100" revision="marshmallow-x86" />
-  <project path="kernel" name="kernel" remote="t100" revision="kernel-4.7" />
-  <project path="bootable/newinstaller" name="platform-bootable-newinstaller" remote="t100" revision="marshmallow-x86" />
 
 </manifest>
