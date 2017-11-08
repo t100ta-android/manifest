@@ -30,8 +30,6 @@
   <!-- port hardware acceleration from nougat-x86 -->
   <project path="hardware/intel/common/libva" name="platform/hardware/intel/common/libva" groups="intel,pdk" remote="x86" revision="nougat-x86" />
   <project path="hardware/intel/common/vaapi" name="platform/hardware/intel/common/vaapi" remote="x86" revision="nougat-x86" />
-  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" groups="pdk-fs" remote="x86" revision="nougat-x86" />
-  <project path="system/media" name="platform/system/media" groups="pdk" remote="x86" revision="nougat-x86" />
 
   <!-- from x86 port repositories -->
   <project path="build" name="platform/build" groups="pdk" remote="x86" revision="marshmallow-x86" >
@@ -435,7 +433,7 @@
   <project path="packages/apps/ExactCalculator" name="platform/packages/apps/ExactCalculator" groups="pdk-fs" />
   <project path="packages/apps/FMRadio" name="platform/packages/apps/FMRadio" groups="pdk-fs" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="notdefault,pdk-fs" />
-  <!-- <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" groups="pdk-fs" /> -->
+  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" groups="pdk-fs" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" groups="pdk-fs" />
@@ -527,7 +525,7 @@
   <project path="system/bt" name="platform/system/bt" groups="notdefault,pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
-  <!-- <project path="system/media" name="platform/system/media" groups="pdk" /> -->
+  <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
