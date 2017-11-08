@@ -14,16 +14,40 @@
            fetch="https://github.com/meijjaa" />
 
   <remote  name="x86"
-           fetch="." />
+           fetch="git://git.osdn.net/gitroot/android-x86" />
+
+  <remote  name="t100"
+           fetch="https://gogs.thedrhax.pw/t100ta-android" />
 
   <default revision="refs/heads/cm-13.0"
            remote="cm"
            sync-c="true"
            sync-j="4" />
 
+<!-- BEGIN T100TAM -->
+
+  <project path="device/generic/common" name="device-generic-common" remote="t100" revision="cm-13.0-x86" />
+  <project path="kernel" name="kernel" remote="t100" revision="kernel-4.7" />
+  <project path="bootable/newinstaller" name="platform-bootable-newinstaller" remote="t100" revision="marshmallow-x86" />
+
+  <!-- opengapps -->
+  <remote name="opengapps" fetch="https://github.com/opengapps/"  />
+
+  <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps" />
+
+  <!-- arm64 depends on arm -->
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
+
+  <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
+
+<!-- END T100TAM -->
+
 <!-- BEGIN ANDROID-X86 -->
-  <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.4" />
-  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="marshmallow-x86" />
+  <!-- <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.4" /> -->
+  <!-- <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="marshmallow-x86" /> -->
   <project path="device/generic/firmware" name="device/generic/firmware" remote="x86" revision="marshmallow-x86" />
   <project path="external/alsa-lib" name="platform/external/alsa-lib" remote="x86" revision="marshmallow-x86" />
   <project path="external/alsa-utils" name="platform/external/alsa-utils" remote="x86" revision="marshmallow-x86" />
@@ -61,7 +85,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="bionic" name="platform/bionic" remote="x86" groups="pdk" revision="cm-13.0-x86" />
-  <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="cm-13.0-x86" />
+  <!-- <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="cm-13.0-x86" /> -->
   <project path="device/generic/android_x86" name="device/generic/x86" groups="pdk" remote="x86" revision="cm-13.0-x86" />
   <project path="device/generic/android_x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="cm-13.0-x86" />
   <project path="external/ffmpeg" name="android_external_ffmpeg" remote="meijjaa" revision="cm-13.0-x86" />
