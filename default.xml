@@ -30,6 +30,8 @@
   <!-- port hardware acceleration from nougat-x86 -->
   <project path="hardware/intel/common/libva" name="platform/hardware/intel/common/libva" groups="intel,pdk" remote="x86" revision="nougat-x86" />
   <project path="hardware/intel/common/vaapi" name="platform/hardware/intel/common/vaapi" remote="x86" revision="nougat-x86" />
+  <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="x86" revision="nougat-x86" />
+  <project path="external/stagefright-plugins" name="platform/external/stagefright-plugins" remote="x86" revision="nougat-x86" />
 
   <!-- from x86 port repositories -->
   <project path="build" name="platform/build" groups="pdk" remote="x86" revision="marshmallow-x86" >
@@ -54,7 +56,7 @@
   <project path="external/e2fsprogs" name="platform/external/e2fsprogs" groups="pdk" remote="x86" revision="marshmallow-x86" />
   <project path="external/eject" name="platform/external/eject" remote="x86" revision="marshmallow-x86" />
   <project path="external/exfat" name="platform/external/exfat" remote="x86" revision="marshmallow-x86" />
-  <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="x86" revision="marshmallow-x86" />
+  <!-- <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="x86" revision="marshmallow-x86" /> -->
   <project path="external/googleanalytics" name="platform/external/googleanalytics" remote="x86" revision="marshmallow-x86" />
   <project path="external/koush/Superuser" name="platform/external/koush/Superuser" remote="x86" revision="marshmallow-x86" />
   <project path="external/koush/Widgets" name="platform/external/koush/Widgets" remote="x86" revision="marshmallow-x86" />
@@ -66,7 +68,7 @@
   <project path="external/ntfs-3g" name="platform/external/ntfs-3g" remote="x86" revision="marshmallow-x86" />
   <project path="external/parted" name="platform/external/parted" remote="x86" revision="marshmallow-x86" />
   <project path="external/s2tc" name="platform/external/s2tc" remote="x86" revision="marshmallow-x86" />
-  <project path="external/stagefright-plugins" name="platform/external/stagefright-plugins" remote="x86" revision="marshmallow-x86" />
+  <!-- <project path="external/stagefright-plugins" name="platform/external/stagefright-plugins" remote="x86" revision="marshmallow-x86" /> -->
   <project path="external/toybox" name="platform/external/toybox" groups="pdk" remote="x86" revision="marshmallow-x86" />
   <project path="external/v86d" name="platform/external/v86d" remote="x86" revision="marshmallow-x86" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" remote="x86" revision="marshmallow-x86" />
