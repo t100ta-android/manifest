@@ -27,12 +27,15 @@
   <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
   <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
 
-  <!-- port hardware acceleration from nougat-x86 -->
+  <!-- port hardware acceleration from nougat-x86 (doesn't work yet) -->
   <project path="hardware/intel/common/libva" name="platform/hardware/intel/common/libva" groups="intel,pdk" remote="x86" revision="nougat-x86" />
   <project path="hardware/intel/common/vaapi" name="platform/hardware/intel/common/vaapi" remote="x86" revision="nougat-x86" />
   <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="x86" revision="nougat-x86" />
   <project path="external/stagefright-plugins" name="platform/external/stagefright-plugins" remote="x86" revision="nougat-x86" />
 
+  <!-- upgrade other projects to nougat-x86 -->
+  <project path="external/mesa" name="platform/external/mesa" remote="x86" revision="nougat-x86" />
+  
   <!-- from x86 port repositories -->
   <project path="build" name="platform/build" groups="pdk" remote="x86" revision="marshmallow-x86" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -64,7 +67,7 @@
   <project path="external/libpciaccess" name="platform/external/libpciaccess" remote="x86" revision="marshmallow-x86" />
   <project path="external/libtruezip" name="platform/external/libtruezip" remote="x86" revision="marshmallow-x86" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="x86" revision="marshmallow-x86" />
-  <project path="external/mesa" name="platform/external/mesa" remote="x86" revision="marshmallow-x86" />
+  <!-- <project path="external/mesa" name="platform/external/mesa" remote="x86" revision="marshmallow-x86" /> -->
   <project path="external/ntfs-3g" name="platform/external/ntfs-3g" remote="x86" revision="marshmallow-x86" />
   <project path="external/parted" name="platform/external/parted" remote="x86" revision="marshmallow-x86" />
   <project path="external/s2tc" name="platform/external/s2tc" remote="x86" revision="marshmallow-x86" />
