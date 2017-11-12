@@ -6,7 +6,7 @@
   <remote  name="x86"
            fetch="git://git.osdn.net/gitroot/android-x86" />
   <remote  name="t100"
-           fetch="https://gogs.thedrhax.pw/t100ta-android" />
+           fetch="https://github.com/t100ta-android" />
   <remote  name="opengapps"
            fetch="https://github.com/opengapps/"  />
   <default revision="refs/tags/android-6.0.1_r79"
@@ -27,7 +27,7 @@
   <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
   <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
 
-  <!-- port hardware acceleration from nougat-x86 -->
+  <!-- port hardware acceleration from nougat-x86 (not working yet) -->
   <project path="hardware/intel/common/libva" name="platform/hardware/intel/common/libva" groups="intel,pdk" remote="x86" revision="nougat-x86" />
   <project path="hardware/intel/common/vaapi" name="platform/hardware/intel/common/vaapi" remote="x86" revision="nougat-x86" />
   <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="x86" revision="nougat-x86" />
